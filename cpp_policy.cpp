@@ -5,7 +5,7 @@ int main() {
 
     try {
 
-    // Load the model saved with Torch.jit
+    // Load the model saved with torch.jit. Loading works
     torch::jit::script::Module module = torch::jit::load("/home/yoshidalab/devel/src/simplecode/libtorch_example/simple_model.pt");
     std::cout << "Policy with Torch Jit Loaded!" << std::endl;
     
@@ -26,7 +26,7 @@ int main() {
 
     try {
 
-    // Load the policy saved with torch.save, just to be sure if it can be loaded
+    // Load the model saved with torch.save. The model can't be loaded, and the function returns an error.
         torch::jit::script::Module test = torch::jit::load("/home/yoshidalab/devel/src/simplecode/libtorch_example/torch_save_simple_model.pt");
         std::cout << "Policy with Torch Save Loaded!" << std::endl;
             }
