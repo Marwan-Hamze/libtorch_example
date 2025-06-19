@@ -27,7 +27,7 @@ observation = np.array([1, 0, 0, 0, # quaternion orientation
                        0.0, 0.0, 0.0])  # Modref: velocities (yaw, root_x, root_y)
 
 # Add a random noise to the observation
-observation += np.random.uniform(-0.02, 0.02, 39)
+# observation += np.random.uniform(-0.02, 0.02, 39)
 
 # Transform the Observation into a Tensor to use it as input to all the models
 tensor_obs = torch.tensor(observation, dtype= torch.float) #Specifying dtype=float, because this is how the models' parameters were saved (not double)
